@@ -9,7 +9,7 @@ def test_no_duplicate_pets(go_to_my_pets):
     # Устанавливаем явное ожидание
     element = WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".table.table-hover tbody tr")))
 
-    # Сохраняем в переменную pet_data элементы с данными о питомцах
+    # Сохраняем в переменную data_my_pets элементы с данными о питомцах
     data_my_pets = pytest.driver.find_elements(By.CSS_SELECTOR, '.table.table-hover tbody tr')
 
     # Настраиваем неявные ожидания:
